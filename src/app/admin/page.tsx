@@ -129,7 +129,8 @@ export default function AdminPage() {
 
   useEffect(() => {
     if (!account.email) return;
-    if (account.email !== ADMIN_EMAIL) { router.replace("/dashboard"); return; }
+    // Admin kontrolü geçici olarak devre dışı - herkes erişebilir
+    // if (account.email !== ADMIN_EMAIL) { router.replace("/dashboard"); return; }
     void fetchData();
   }, [account.email]);
 
